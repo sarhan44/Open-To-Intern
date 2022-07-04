@@ -60,6 +60,7 @@ const createCollege = async (req, res) => {
 // ==+==+==+====+==+==+==+=[ Get College With Intern List ]==+==+==+==+===+==+==+==+=
 
 const collegeDetails = async function (req, res) {
+    res.setHeader('Access-Control-Allow-Origin', "*")
     try {
 
         let clgName = req.query.collegeName;
