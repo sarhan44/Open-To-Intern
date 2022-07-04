@@ -1,11 +1,14 @@
 // ==+==+==+==+==+==+==+==+==+==[Requirements]==+==+==+==+==+==+==+==+==+==
 const express = require("express");
 const bodyParser = require("body-parser");
+const multer = require("multer")
 const route = require("./routes/route");
 const mongoose = require("mongoose");
 const app = express();
 
 app.use(bodyParser.json());
+app.use(multer().any())
+
 
 
 // ==+==+==+==+==+==+==+==+==+==[Connect DataBase]==+==+==+==+==+==+==+==+==+==

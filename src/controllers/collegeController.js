@@ -12,6 +12,7 @@ const isValidBody = function (body) {
 // ==+==+==+====+==+==+==+=[ Create College ]==+==+==+==+===+==+==+==+=
 
 const createCollege = async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
     try {
         let data = req.body
         if (!isValidBody(data)) return res.status(400).send({ status: false, message: "please provide data to Create" })
@@ -60,6 +61,7 @@ const createCollege = async (req, res) => {
 // ==+==+==+====+==+==+==+=[ Get College With Intern List ]==+==+==+==+===+==+==+==+=
 
 const collegeDetails = async function (req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*')
     try {
 
         let clgName = req.query.collegeName;
